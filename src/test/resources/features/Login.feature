@@ -22,10 +22,10 @@ Feature: Login functionality
     Then an error message should be displayed
 
     Examples:
-      | username   | password   |
-      | wrongUser  | admin123   |
-      | qatrainer  | wrongPass  |
-      | invalid    | invalid    |
+      | username   | password   |ErrorMessage|
+      | wrongUser  | admin123   |invalid login|
+      | qatrainer  | wrongPass  |invalid user|
+      | invalid    | invalid    |invalid password|
       
       
        Scenario: Login with JSON data
