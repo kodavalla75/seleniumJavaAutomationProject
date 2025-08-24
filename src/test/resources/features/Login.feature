@@ -14,3 +14,15 @@ Feature: Login functionality
 
   
   
+@regression @login
+  Scenario Outline: Unsuccessful login with invalid credentials
+    Given user navigates to the login page
+    When user enters username "<username>" and password "<password>"
+    And user clicks on the login button
+    Then an error message should be displayed
+
+    Examples:
+      | username   | password   |
+      | wrongUser  | admin123   |
+      | qatrainer  | wrongPass  |
+      | invalid    | invalid    |
