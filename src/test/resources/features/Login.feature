@@ -26,3 +26,14 @@ Feature: Login functionality
       | wrongUser  | admin123   |
       | qatrainer  | wrongPass  |
       | invalid    | invalid    |
+      
+      
+       Scenario: Login with JSON data
+    Given user is on login page
+    When user enters login details from "validLogin"
+    Then user should be navigated to the home page
+
+  Scenario: Booking with multiple datasets
+    Given user is on booking page
+    When user loads booking data from "bookingData"
+    Then system should display available options for each dataset
